@@ -1,0 +1,13 @@
+interview_question_task:
+  description: >
+    Generate targeted interview questions based on the candidate's resume and screening report.
+    
+    Candidate Resume: {candidate_resume}
+    Job Title: {job_title}
+    Job Description: {job_description}
+    Screening Report: {screening_report}
+
+    Generate technical, behavioral, and follow-up questions tailored to this candidate.
+  expected_output: >
+    A JSON object containing technical_questions, behavioral_questions, and follow_up_questions.
+  agent: interview_question_generator

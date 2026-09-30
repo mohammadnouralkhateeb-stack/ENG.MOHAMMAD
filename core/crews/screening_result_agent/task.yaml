@@ -1,0 +1,13 @@
+resume_screening_task:
+  description: >
+    Evaluate the candidate resume against the job description and required skills.
+    
+    Candidate Resume: {candidate_resume}
+    Job Title: {job_title}
+    Job Description: {job_description}
+    Required Skills: {required_skills}
+
+    Analyze technical skills, experience fit, and output the score, strengths, and missing skills.
+  expected_output: >
+    A JSON object with score, strengths, missing_skills, recommendation, and summary.
+  agent: resume_screening_agent
