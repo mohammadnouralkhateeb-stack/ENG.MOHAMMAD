@@ -1,10 +1,9 @@
 from django.db import models
+from .user import User
 
-class resume(models.Model):
-    candidate = models.ForeignKey('Candidate', on_delete=models.CASCADE)
-    job = models.ForeignKey('Job', on_delete=models.CASCADE)
-    file = models.FileField(upload_to='resumes/')
-    uploaded_at = models.DateTimeField(auto_now_add=True)
-
+class Resume(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    resume_file = models.FileField(upload_to='resumes/')
+    
     def __str__(self):
-        return f"{self.candidate.full_name} - {self.job.title}"
+        return f"Resume for {self.user.user_name}"
