@@ -1,0 +1,25 @@
+extract_resume_skills_task:
+  description: |
+    ### Inputs:
+    - **candidate_resume:** {extracted_text}
+
+    ### Task:
+    Analyze the provided candidate resume text thoroughly.
+    1. Read and parse the resume text to understand the candidate's background.
+    2. Extract all technical skills, programming languages, frameworks, libraries, tools, and databases.
+    3. Extract all relevant soft skills and core competencies.
+    4. Summarize the candidate's core professional experience and education briefly.
+    5. Format your output strictly as a JSON object matching the requested structure.
+
+  expected_output: >
+    Return ONLY a JSON object (do NOT wrap it in ```json fences, start directly with {) using this exact structure:
+
+    {
+      "technical_skills": ["skill", "..."],
+      "soft_skills": ["skill", "..."],
+      "programming_languages": ["language", "..."],
+      "tools_and_frameworks": ["tool/framework", "..."],
+      "experience_summary": "A brief summary of the candidate's background."
+    }
+
+  agent: resume_analyzer_agent
