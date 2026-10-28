@@ -1,5 +1,0 @@
-Django=>6.0
-djangorestframework
-drf-yasg
-python-decouple
-psycopg2-binary
